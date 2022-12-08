@@ -47,10 +47,10 @@ render는 html 코드를 사용자에게 보여준다.
     - 컴포넌트에서 return(  )
         - return () 괄호안이 사용자가 보게될 컴포넌트
             
-            [화면 기록 2022-12-09 오전 1.54.39.mov](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb653b26-61a2-462d-9c5b-137942aa2399/%E1%84%92%E1%85%AA%E1%84%86%E1%85%A7%E1%86%AB_%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%86%A8_2022-12-09_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_1.54.39.mov)
-            
-        - 
+-3.3 recap 
+ ![화면 기록 2022-12-09 오전 1 54 39](https://user-images.githubusercontent.com/79883776/206516474-72d9c14d-a7b8-4a99-a554-1157cde64859.gif)
 
+        
 ### #4 Props
 
 
