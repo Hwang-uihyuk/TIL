@@ -51,7 +51,42 @@ render는 html 코드를 사용자에게 보여준다.
  ![화면 기록 2022-12-09 오전 1 54 39](https://user-images.githubusercontent.com/79883776/206516474-72d9c14d-a7b8-4a99-a554-1157cde64859.gif)
 
         
+- 3.4 State Functions
+    - set함수에는 함수를 넣을수도 있다.
+    - 이 함수의 첫번째 argument는 ‘현재 값’이다.
+    - 이 함수의 return 값이 새로운 state가 된다.
+    
+    ```jsx
+    setCounter(count + 1) 보다
+    setCounter(count => count + 1 )이 더 안전한 방법 이 count가 확실히 현재 값이라는 걸 보장하고 있기 때문에
+    ```
+<aside>
+💡 ‘ 제발 숙지할 것 ‘
+
+- javascript 함수 여러가지 방법으로 쓰기
+    - arr.map((item) ⇒ <li>{item} </li>
+    - arr.map((item) ⇒ {return <li>{item}</li>}
+    - arr.map(function(item) ⇒ {return <li>{item}</li>}
+    
+</aside>
+
+- 3.5 Inputs and State
+    - <label> 태그 input에 연결해주기 위해 id를 알아야한다.
+    - input value ⇒ uncontrolled value
+- 3.6 State Practice 1
+    - 코드 쓰기 minute ⇒ hours and reset button
+- 3.7 State Practice 2
+    -
 ### #4 Props
 
+### 5.CREATE REACT APP
 
+- 5.0 Introduction
+
+<img width="526" alt="스크린샷 2022-12-09 오후 2 09 38" src="https://user-images.githubusercontent.com/79883776/206628831-a6b4174c-390e-4e4a-b03e-4250f6731c37.png">
+
+
+- 5.1 Tour of CRA
+    - create-react-app의 작업 포인트 ⇒ 분할, 정복
+    - crete-react-app은 무작위적인 랜덤 class를 갖는다.
 </code>
