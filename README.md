@@ -48,9 +48,12 @@ render는 html 코드를 사용자에게 보여준다.
         - return () 괄호안이 사용자가 보게될 컴포넌트
             
 -3.3 recap 
- ![화면 기록 2022-12-09 오전 1 54 39](https://user-images.githubusercontent.com/79883776/206516474-72d9c14d-a7b8-4a99-a554-1157cde64859.gif)
+    
+    
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/79883776/206655870-f385bc72-0a78-4ee9-baa9-408c4be96547.gif)
 
-        
+
+
 - 3.4 State Functions
     - set함수에는 함수를 넣을수도 있다.
     - 이 함수의 첫번째 argument는 ‘현재 값’이다.
@@ -89,6 +92,8 @@ render는 html 코드를 사용자에게 보여준다.
     - 이런 문제를 줄이기 위해 PropTypes 모듈 도움
 - 4.3 recap
 
+    //코드 영상 
+    
 ### 5.CREATE REACT APP
 
 - 5.0 Introduction
