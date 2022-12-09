@@ -76,8 +76,18 @@ render는 html 코드를 사용자에게 보여준다.
 - 3.6 State Practice 1
     - 코드 쓰기 minute ⇒ hours and reset button
 - 3.7 State Practice 2
-    -
+    
 ### #4 Props
+
+- 4.0 Props
+    - 부모 컴포넌트로부터 자식 컴포넌트에 데이터를 보낼 수 있게 해주는 방법
+- 4.1 memo
+    - 불필요한 re-renderd은 memo로 관리할 수 있다.
+    - 컴포넌트가 memo()로 wrapping 될 때, react는 컴포넌트 렌더링하고 결과 Memoizing
+- 4.2 Prop Types
+    - 파라미터 오류가 있어도 확인 할 수없는 문제점
+    - 이런 문제를 줄이기 위해 PropTypes 모듈 도움
+- 4.3 recap
 
 ### 5.CREATE REACT APP
 
