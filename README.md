@@ -104,4 +104,42 @@ render는 html 코드를 사용자에게 보여준다.
 - 5.1 Tour of CRA
     - create-react-app의 작업 포인트 ⇒ 분할, 정복
     - crete-react-app은 무작위적인 랜덤 class를 갖는다.
+    
+### 6.Effects
+
+- 6.0 Introduction
+    - state가 변화 할 때 모든 component는 다시 실행
+    - but 몇몇 코드는 처음 딱 한번만 실행되고 다시는 실행되지 않도록 하고 싶을 수 있다.
+- 6.1 useEffect
+    - useEffect(argumnet1, argurment2)
+        - 첫번째는 한번만 실행될 함수
+        - 두번째는 배열
+- 6.2 Deps
+    - useEffects의 배열에 [], 아무것도 있지 않는다면, 아무것도 지킬게 없다.
+    - useEffects 배열에  [keyword]가 들어가 있으면 keyword가 있을때만 발동시킨다.
+        - [keyword] ⇒처음 시작할때와,  keyword가 변화할 때 코드를 실행할거다.
+        - [] ⇒  처음 한번만 실행
+- 6.3 recap
+    - 코드 영상찍어서
+- 6.4 Cleanup
+    - 컴포넌트를 Hide 할 때 컴포넌트가 스크린에서 지워짐, Show 할 때 다시 생성 되니까 useEffect도 다시 실행됨
+    - 컴포넌트 destroy될 때 코드 실행 가능
+        
+        ```jsx
+        function Hello() {
+          useEffect(() => {
+            console.log("i'm here")
+            return function(){     //여기서 함수 불러주면서 
+              console.log('Destroyed!')
+            }
+          }, []) //한 번 호출
+          return(
+            <h2>Hello</h2>
+          )
+        }
+        ```
 </code>
+
+
+
+
