@@ -138,7 +138,39 @@ render는 html 코드를 사용자에게 보여준다.
           )
         }
         ```
-</code>
+        
+        
+####7 PRACTICE MOVIE APP
+
+        - 7.0 To Do List Part One
+            - form 만들 때  page 가 refresh 되지 않도록 event.preventDefault 해준다.
+        - 7.1 To Do List Part Two
+            - todos를 보여줄 때 map 활용
+            - <li> 태그
+        - 7.2 Coin Tracker
+            - API 가져오기
+            - 한번만 보여주고 싶으니까 useEffect
+            - 검사 - network에 tickers가 rending 됬나 확인. preview와 response로 확인
+            - map 사용하면 react.js는 element에 key를 주도록 함.
+
+        https://user-images.githubusercontent.com/79883776/206907586-fa27e1fa-f99f-4d5d-bb7a-457f906cdba8.mov
+
+
+        - 7.3 Movie App part One
+            - 
+        - 7.4 Movie App part Two
+            - 
+        - 7.5 React Router
+            - 
+        - 7.6 Parameters
+            - 
+        - 7.7 Publishing
+            - 
+        - 7.8 Conclusions
+            - 
+        - 7.9 Styles
+        -
+        </code>
 
 
 
