@@ -152,8 +152,8 @@ render는 html 코드를 사용자에게 보여준다.
             - 한번만 보여주고 싶으니까 useEffect
             - 검사 - network에 tickers가 rending 됬나 확인. preview와 response로 확인
             - map 사용하면 react.js는 element에 key를 주도록 함.
+![화면-기록-2022-12-11-오후-9 29 58](https://user-images.githubusercontent.com/79883776/206908112-2e00d4c2-8601-428b-a178-ff04f019e6bd.gif)
 
-        https://user-images.githubusercontent.com/79883776/206907586-fa27e1fa-f99f-4d5d-bb7a-457f906cdba8.mov
 
 
         - 7.3 Movie App part One
