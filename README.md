@@ -161,7 +161,39 @@ render는 html 코드를 사용자에게 보여준다.
         - 7.4 Movie App part Two
             - 
         - 7.5 React Router
-            - 
+        
+            - in terminal => yarn install react-router-dom
+            
+            - import {
+
+                  BrowserRouter as Router,
+                  Switch,
+                  Route,
+                  Routes,
+                } from "react-router-dom"
+                
+                
+           - <Switch> </Switch>는 ES5 문법
+            
+            - <Router>
+                  <Routes>
+                    <Route path = "/" element={<Home/>}/>
+                    <Route path ="/movie" element ={<Detail/>}/>
+                  </Routes>
+
+                </Router>
+                
+            - Browser Router에서 URL은 우리가 예상하는 대로 생겼다.
+            
+            
+            - 영화 제목을 클릭하면, 화면 전체가 재실행 되는걸 볼 수 있어
+            
+             이걸 방지하기 위해 Link라는 개념이 등장함 
+            브라우저 새로고침이 없이도 유저를 다른 페이지로 이동시켜주는 컴포넌트다.
+            
+              <a href=""> 대신 Link를 쓰는이유는 브라우저 새로고침이 없이도 유저를 다른 페이지로 이동시켜주기 때문이다.
+              
+
         - 7.6 Parameters
             - 
         - 7.7 Publishing
