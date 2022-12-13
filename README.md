@@ -195,9 +195,9 @@ render는 html 코드를 사용자에게 보여준다.
               
 
         - 7.6 Parameters
-            - 
+            - usecallback 사용하기!
         - 7.7 Publishing
-            - 
+            - npm i gh-pages
         - 7.8 Conclusions
             - 
         - 7.9 Styles
