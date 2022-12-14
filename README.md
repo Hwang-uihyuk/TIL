@@ -198,10 +198,9 @@ render는 html 코드를 사용자에게 보여준다.
             - usecallback 사용하기!
         - 7.7 Publishing
             - npm i gh-pages
+            - package.json을 가서 development }, 이 다음에 "homepage": https://                         mygithubname / gitgub.io 
         - 7.8 Conclusions
-            - 
-        - 7.9 Styles
-        -
+        - 7.9 Style
         </code>
 
 
