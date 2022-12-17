@@ -289,25 +289,25 @@ render는 html 코드를 사용자에게 보여준다.
         
       4.5 useParams
       
-          - import * as React from 'react';
-  import { Routes, Route, useParams } from 'react-router-dom';
+         - import * as React from 'react';
+          import { Routes, Route, useParams } from 'react-router-dom';
 
-  function ProfilePage() {
-    // Get the userId param from the URL.
-    let { userId } = useParams();
-    // ...
-  }
+          function ProfilePage() {
+            // Get the userId param from the URL.
+            let { userId } = useParams();
+            // ...
+          }
 
-  function App() {
-    return (
-      <Routes>
-        <Route path="users">
-          <Route path=":userId" element={<ProfilePage />} />
-          <Route path="me" element={...} />
-        </Route>
-      </Routes>
-    );
-  }
+          function App() {
+            return (
+              <Routes>
+                <Route path="users">
+                  <Route path=":userId" element={<ProfilePage />} />
+                  <Route path="me" element={...} />
+                </Route>
+              </Routes>
+            );
+          }
     4.6 Outlet
     
         레이아웃 설정이 매우 간단
