@@ -201,8 +201,119 @@ render는 html 코드를 사용자에게 보여준다.
             - package.json을 가서 development }, 이 다음에 "homepage": https://                         mygithubname / gitgub.io 
         - 7.8 Conclusions
         - 7.9 Style
-        </code>
 
 
 
+
+#### 1. INTRODUCTION
+  
+#### 2. STYLED COMPONENTS
+     const 컴포넌트명 = styled.태그명
+     ex) const Center = css`
+            display :flex;
+            justify-content:center;
+            align-items: center;
+            `;
+
+          const Flex = div `
+            ${flexCenter}
+            `;
+
+            - 스타일에 Props 적용
+                장점 => 변수에 의해 스타일을 바꿀 수 있다.
+                내부적으로 props 받기 가능하다, 그에 따라 스타일 변경가능
+            - global Theme
+            - Transient props
+            
+#### 3. TYPESCRIPT
+    3.1 DefinitelyTyped
+    
+        - 내가 쓰고 있는 타입 바꾸기!
+        
+    3.2 Typing the Props
+    
+        - object 에게 type을 설명해주는 시간 필요
+        - interface 안에다가 설명
+            - interface 활용해서 Object 보호
+    3.3 Option Props
+    3.4 State
+        - component를 업데이트 하고 싶다면 state도 바꿔야함
+        - state를 바꾸면 React가 새로고침 하는 것도 알고 있다.
+        - 기본적으로 default 값 생서하면 TypeScript => value 타입 설정
+    3.5 Forms
+    3.6 Themes
+        - typescript + styled components 테마 연결하기
+        - Create declare file
+#### 4. REACT ROUTER
+
+      4.1 BrowserRouter
+          - react-router-dom
+          - npm install react-router-dom
+      4.2 createBrowserRouter
+          - return (
+      <BrowserRouter>
+        <Switch>
+          <Route path="/Name/*">
+            <Name />
+          </Route>
+          <Route path="/">
+          <Main />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    );
+    
+      4.3 errorElement
+            const router = createBrowserRouter([
+        {
+          path: "/",
+          element: <Root />,
+          children: [
+            {
+              path: "",
+              element: <Home />,
+            },
+            {
+              path: "about",
+              element: <About />,
+            },
+          ],
+        },
+      ]);
+  
+      4.4 useNavigate
+      
+        - navigate("../success",  { replace: true});
+            첫번째 인자로 주소, 두번째 인자로 {reaplce,state}
+        - useHistory의 기능도 포함
+        
+      4.5 useParams
+      
+          - import * as React from 'react';
+  import { Routes, Route, useParams } from 'react-router-dom';
+
+  function ProfilePage() {
+    // Get the userId param from the URL.
+    let { userId } = useParams();
+    // ...
+  }
+
+  function App() {
+    return (
+      <Routes>
+        <Route path="users">
+          <Route path=":userId" element={<ProfilePage />} />
+          <Route path="me" element={...} />
+        </Route>
+      </Routes>
+    );
+  }
+    4.6 Outlet
+    
+        레이아웃 설정이 매우 간단
+        {Outlet/}을 사용하면 {children}을 사용하는 것과 같은 효과
+        
+    4.7 useOutletContext
+     
+</code>
 
