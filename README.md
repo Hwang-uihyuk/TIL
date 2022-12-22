@@ -317,3 +317,160 @@ render는 html 코드를 사용자에게 보여준다.
      
 </code>
 
+    # CRYPTO TRACKER
+
+### 5.0set up
+
+복습
+
+- router 사용
+    - yarn install react-router-dom
+    - 
+    
+    ```jsx
+    <BrowserRouter>
+    	<Routes>
+    		<Route path="/" element =''/></Routes>
+    	</Routes>
+    </BrowserRouter>
+    ```
+    
+    - useParams
+        
+        ```jsx
+        1번 : const {coinId} = useParams<coinId : string>
+        
+        2번 : interface 사용하기
+        
+        interface parmas
+        {
+        	coinId : string
+        }
+        
+        const {coinId} = useParamas<params>
+        ```
+        
+
+### 5.1 styles
+
+- Source Sans Pro 폰트
+    
+    @import
+    
+    url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght
+    
+    @300
+    
+    ;400&display=swap');
+    
+    font-family: 'Source Sans Pro', sans-serif;
+    
+- createGlobalStyle
+    - 전역 스타일을 처리하는 특수 Styled Component
+
+### 5.2 Home Part One
+
+- JSON Viewer (JSON 데이터 가독성 좋게 보기)
+    
+    https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh?hl=ko
+    
+
+### 5.3 Home Part Two
+
+- https://api.coinpaprika.com/v1/coins
+
+### 5.4 Route States
+
+- Es6
+    - < Link to="/home" state={state} / >
+- Es5
+    - < Link to={{ pathname: "/home", state: state }} / >
+
+### 5.5 Coin Data
+
+### 5.6 Data Types
+
+VSCode 단축키
+
+Ctrl(Command)+D: 같은 문자열 선택
+
+Shift+Alt(Option)+i: 선택한 모든 문자열에 가장 우측 끝으로 포커싱
+
+Ctrl(Command)+Shift+오른쪽 화살표: 현재 선택한 문자열을 기준으로 우측 끝까지 문자열 선택
+
+### 5.7. Nested Routes Part One
+
+- outlet (중첩 라우트 사용하기)
+    - 자식 라우트 사용하기
+
+### 5.8. Nested Routes Part Two
+
+- useRouteMatch() ⇒ useMatch()
+    - 현재 위치를 기준 지정된 경로에 대한 일치 데이터를 반환한다.
+
+### 5.9 React Query Part One
+
+- 
+
+간단한 axios 로 사용법 데이터 가져오기
+
+export const fetchCoins = async() =>{
+
+// 데이터 얻는법
+
+// axios.get(url).then(res => console.log(res.data))
+
+return await axios.get("https://api.coinpaprika.com/v1/coins").then(res => res.data);
+
+}
+
+기존 axios 인스톨 해줘야함
+
+### 5.10 React Query Part Two
+
+- React Query Devtools
+    - import { ReactQueryDevtools } from 'react-query/devtools';
+    - < ReactQueryDevtools initialIsOpen={false} / >
+
+  
+
+### 5.11 Recap
+
+- recap!
+
+### 5.12 Price Chart part One
+
+- context ⇒ prop전달
+    - 상위 컴포넌트에서 Outlet 컴포넌트에 context에 prop를 전달한다.
+    
+    useOutletContext() 훅이용 props를 받아온다.
+    
+
+### 5.13 Price Chart part Two
+
+- 오류
+    
+    data: data?.map((price) => Number(price.close)) as number[],
+    
+     ⇒ Number() 감싸기
+    
+
+### 5.14 Three
+
+- Apex Charts Fill
+    - https://apexcharts.com/docs/options/fill/
+- Flat UI Color
+    - https://flatuicolors.com
+- UTC형태의 값
+    - 
+    
+    ```jsx
+    categories: chartData?.map((price) =>
+    new Date(price.time_close * 1000).toISOString()
+    ),
+    ```
+    
+
+### 5.15 Final Touch
+
+- react helmet = > react-helmet-async
