@@ -474,3 +474,308 @@ return await axios.get("https://api.coinpaprika.com/v1/coins").then(res => res.d
 ### 5.15 Final Touch
 
 - react helmet = > react-helmet-async
+
+### 6.0 Dark Mode part one
+
+- Recoil
+    - state management library
+
+### 6.1 Dark Mode part two
+
+- useState
+    - 컴포넌트 local State
+
+### 6.2 Introduction to Recoil
+
+- RecoilRoot
+
+```jsx
+atom({
+key: "저장할 state",
+default:"state의 기본 상태"
+});
+```
+
+### 6.3 Introduction to Recoil part two
+
+- useRecoilValue(state)
+    - Recoil state return
+- useSetRecoilState(state)
+    - value → update → setter return
+    - 비동기로 사용 → setter return
+
+### 6.4 Recap
+
+### 6.5 To Do Setup
+
+```jsx
+npx create-react-app react-todo-app --template typescript
+```
+
+### 6.6 Forms
+
+- useForm
+    - register
+        - name, onBlur, onChange, onClick, ref를 return
+    - watch
+        - form의 입력값들의 변화를 관찰할 수 있게 해주는 함수
+
+### 6.7 Form Validation
+
+```jsx
+handleSubmit: ((data: Object, e?: Event) => void, (errors: Object, e?: Event) => void) => Function
+```
+
+### 6.8 Forms Errors
+
+```jsx
+/^[A-Za-z0-9._%+-]+@naver.com$/
+
+^ :문장의 시작
+[] : 문자셋 안의 아무문자
++ : 하나 또는 많이
+```
+
+### 6.9 Custom Validation
+
+```jsx
+validate : { (value) => !value.includes("nico") || "error message"}
+```
+
+### 6.10 Recap
+
+### 6.11 Add To Do
+
+- useRecoilValue(state)
+    - Recoil state return
+- useSetRecoilState(state)
+    - value → update → setter return
+    - 비동기로 사용 → setter return
+
+### 6.12 Refactoring
+
+- Divide!
+- Conquer!
+
+### 6.13 Categories
+
+- 단축평가
+    - 논리 연산의 결과를 결정하는 피 연산자를 타입 변환하지 않고 그대로 반환
+
+### 6.14 Immutability part One
+
+- Array.prototype.findIndex()
+    - array 첫 번째 요소에 대한 인덱스 반환
+    - 없을시 -1 반환
+    - 인덱스 대신 반환 find()
+
+### 6.15 Immutability part Two
+
+- 다시 듣기 잘 안됨….
+- another way 참고 할것 댓글
+
+```jsx
+Another way.
+setTodos((prevTodos) => {
+const targetIndex = prevTodos.findIndex((todo) => todo.id === id);
+const newTodo: ITodo = {
+id,
+text,
+category: categoryState as ITodo["category"],
+};
+const newTodos = [...prevTodos]; // create new array
+newTodos.splice(targetIndex, 1, newTodo);
+return newTodos;
+});
+```
+
+### 6.16 Selectors part One
+
+- Selectors
+    - 파생된 state 일부를 나타냄
+    
+    ```jsx
+    const filteredTodoListState = selector({
+    key: 'filteredTodoListState',
+    get: ({get}) => {
+    const filter = get(todoListFilterState);
+    const list = get(todoListState);
+    
+    switch (filter) {
+    case 'Show Completed':
+    return list.filter((item) => item.isComplete);
+    case 'Show Uncompleted':
+    return list.filter((item) => !item.isComplete);
+    default:
+    return list;
+    }
+    },
+    });
+    ```
+    
+
+### 6.17 Selectors part Two
+
+- onInput
+    - 클릭하자마자 동작
+- onChange
+    - 포커스를 잃었을때 동작
+
+### 6.18 Enums
+
+- Enums
+
+```jsx
+숫자 열거형 (Numeric enums)
+enum Direction {
+Up = 1,
+Down,
+Left,
+Right,
+}
+
+문자열 열거형 (String enums)
+enum Direction {
+Up = "UP",
+Down = "DOWN",
+Left = "LEFT",
+Right = "RIGHT",
+}
+```
+
+### 6.19 Recap
+
+### 7.0 Get Selectors
+
+- selecotrs
+
+```jsx
+const proxySelector = selector({
+key: 'ProxySelector',
+get: ({get}) => ({...get(myAtom), extraField: 'hi'}),
+set: ({set}, newValue) => set(myAtom, newValue),
+});
+```
+
+### 7.1 Set Selectors
+
+- get
+    - 다른 atom selector로부터 값을 찾는데 사용되는 함수
+- set
+    - 업스트림 Recoil 상태의 값을 설정할 때 사용되는 함수
+
+### 7.2 Drag and Drop part One
+
+```jsx
+react-beautiful-dnd
+React로 list를 만들기 위한 아름답고 접근 가능한 드래그 앤 드롭
+npm i react-beautiful-dnd
+npm i --save-dev @types/react-beautiful-dnd
+
+https://www.npmjs.com/package/react-beautiful-dnd
+https://github.com/atlassian/react-beautiful-dnd/blob/master/docs/about/installation.md
+
+react-beautiful-dnd 테스트해 보기
+https://react-beautiful-dnd.netlify.app/iframe.html?id=board--simple
+
+react-beautiful-dnd 예시 코드
+https://codesandbox.io/s/k260nyxq9v
+
+DragDropContext
+https://github.com/LeeHyungGeun/react-beautiful-dnd-kr
+```
+
+### 7.3 Drag and Drop part Two
+
+- dragHandleProps
+    - 특정 영역을 통해서만 드래그를 가능하게 할 때
+
+### 7.4 Styles and Placeholders
+
+- provided.placeholder (?ReactElement)
+
+### 7.5 Reordering
+
+- result
+- result.draggableId
+- result.type
+- result.source
+- result.destination
+
+### 7.6 Reordering part Two
+
+- key
+    - list내에서 키값안주면 오류
+    - list 내에서 고유해야한다.
+    - draggabledId를 key사용하면 된다.
+
+### 7.7 performance
+
+- React.memo
+    - 결과를 메모이징하도록 래핑한다.
+        - 즉 성능향상
+
+### 7.8 MultiBoards
+
+- Object.keys()
+    - 객체의 속성 이름들을 일반적인 반복문과 동일한 순서로 순회되는 열거할 수 있는 배열로 반환
+
+### 7.9 Same Board Movement
+
+- DropResult
+    
+    ```jsx
+    DropResult
+    draggableId: 드래그 되었던 Draggable의 id
+    type: 드래그 되었던 Draggable의 type
+    source: Draggable이 시작된 위치
+    destination: Draggable이 끝난 위치
+    ```
+    
+
+### 7.10 Cross Board Movement
+
+오류..
+
+### 7.11 Droppable Snapshot
+
+- snapshot
+    
+    ```jsx
+    isDraggingOver: boolean
+    현재 선택한 Draggable이 특정 Droppable위에 드래깅 되고 있는지 여부 확인
+    
+    draggingOverWith: ?DraggableId
+    Droppable 위로 드래그하는 Draggable ID
+    
+    draggingFromThisWith: ?DraggableId
+    현재 Droppable에서 벗어난 드래깅되고 있는 Draggable ID
+    
+    isUsingPlaceholder: boolean
+    placeholder가 사용되고 있는지 여부
+    ```
+    
+
+### 7.12 Final Styles
+
+- Flatuicolors
+    - https://flatuicolors.com/palette/us
+
+### 7.13 Refs
+
+- useRef()
+    - current 프로퍼티로 전달된 인자로 초기화된 변경 가능한 ref 객체 반환
+    - ref 속성 < useRef() 쓰자
+
+### 7.14 Task Objects
+
+- React Hook Form
+
+### 7.15 Creating Tasks
+
+- todo 객체 한번에 뽑아낼려고 하면 안된다.
+- 따로 값들을 꺼내야함
+
+### 7.16 Code Challenge
+
+오류
