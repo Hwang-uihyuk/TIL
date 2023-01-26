@@ -12,6 +12,10 @@
    - 비동기 처리와 콜백 함수 - 밑에사이트에서 타고들어가면됨. 
    - async와 await 사용 방법이 무엇인가요? https://joshua1988.github.io/web-development/javascript/js-async-await/#async--await%EB%8A%94-%EB%AD%94%EA%B0%80%EC%9A%94
    - var, let ,const의 변수를 비교해보세요
+   - lexical scope(정적스코프), scope chain
+        https://www.zerocho.com/category/Javascript/post/5740531574288ebc5f2ba97e
+   - 실행 컨텍스트 
+   
 
 ### React
     
@@ -21,7 +25,7 @@
    - JSON과 YAML이 무엇인가요?  https://www.youtube.com/watch?v=55FrHTNjTCc
    - XML 과 HTML에 대해서 설명해보시오. https://mommoo.tistory.com/17
    - DOM이란 무엇인가? http://www.tcpschool.com/javascript/js_dom_concept
-   - Virtual DOM 이 무엇인지 설명하세요. 
+   - Virtual DOM 이 무엇인지 설명하세요.  -> https://doqtqu.tistory.com/316
    - REST API가 무엇인지 설명하세요. https://www.youtube.com/watch?v=iOueE9AXDQQ  ,    - https://aws.amazon.com/ko/what-is/restful-api/
 
      대략적인 설명 => REST API란 HTTP요청을 보낼 때 어떤 URI에 어떤 메소드를 사용할지 개발자들 사이에 널리 지켜지는 약속이다.
